@@ -1,0 +1,11 @@
+{
+  "name": "Lounge Guild · 프라이빗 러너스 라운지",
+  "short_name": "Lounge",
+  "description": "테일즈런너 Lv.15 Lounge 길드 모집 · 규칙 · 문의 안내",
+  "lang": "ko-KR",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07101b",
+  "theme_color": "#07101b",
+  "icons": [{"src": "assets/monogram.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

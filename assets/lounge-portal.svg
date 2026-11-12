@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 900" role="img" aria-labelledby="t d">
+<title id="t">Lounge 황금빛 아치와 별빛</title><desc id="d">네이비와 금빛으로 장식된 밤의 프라이빗 라운지 입구, 황금 원형 엠블럼과 신비로운 별빛</desc>
+<defs>
+<linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#654d2f"/><stop offset=".18" stop-color="#fde5aa"/><stop offset=".43" stop-color="#b2864e"/><stop offset=".68" stop-color="#fff0c7"/><stop offset="1" stop-color="#876036"/></linearGradient>
+<linearGradient id="inner" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#15344b"/><stop offset=".34" stop-color="#091c36"/><stop offset=".73" stop-color="#0c1128"/><stop offset="1" stop-color="#050913"/></linearGradient>
+<radialGradient id="sky" cx="50%" cy="31%" r="62%"><stop stop-color="#284a60" stop-opacity=".94"/><stop offset=".52" stop-color="#1a2344" stop-opacity=".61"/><stop offset="1" stop-color="#080d1b" stop-opacity="0"/></radialGradient>
+<radialGradient id="halo"><stop stop-color="#f9e2a8" stop-opacity=".57"/><stop offset=".29" stop-color="#c69d57" stop-opacity=".18"/><stop offset="1" stop-color="#c69d57" stop-opacity="0"/></radialGradient>
+<linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#263747"/><stop offset="1" stop-color="#050911"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbe3ac" stop-opacity=".28"/><stop offset=".34" stop-color="#ffffff" stop-opacity=".04"/><stop offset="1" stop-color="#f0d69e" stop-opacity=".09"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="27" flood-color="#02040a" flood-opacity=".9"/></filter>
+<pattern id="specks" width="92" height="94" patternUnits="userSpaceOnUse"><circle cx="17" cy="21" r="1" fill="#ffdfab" opacity=".53"/><circle cx="66" cy="57" r="1.5" fill="#e8d5ab" opacity=".51"/><circle cx="35" cy="82" r=".9" fill="#fff" opacity=".66"/></pattern>
+<clipPath id="opening"><path d="M151 741V328C151 197 254 92 380 92S609 197 609 328V741Z"/></clipPath>
+</defs>
+<!-- ancient outer architecture -->
+<path d="M98 788V328C98 167 222 38 380 38S662 167 662 328V788" fill="none" stroke="#665139" stroke-width="55" opacity=".3"/>
+<path d="M116 764V329C116 183 233 64 380 64S644 183 644 329V764Z" fill="#080d1b" stroke="url(#rim)" stroke-width="7" filter="url(#shadow)"/>
+<path d="M131 750V328C131 188 240 78 380 78S629 188 629 328V750Z" fill="url(#inner)" stroke="#dcbf86" stroke-opacity=".65" stroke-width="1.6"/>
+<g clip-path="url(#opening)">
+<rect x="135" y="90" width="490" height="650" fill="url(#sky)"/>
+<rect x="135" y="90" width="490" height="650" fill="url(#specks)"/>
+<ellipse cx="387" cy="366" rx="238" ry="219" fill="url(#halo)"/>
+<!-- wall panels -->
+<path d="M184 759V333C184 223 270 130 380 130S576 223 576 333V759" fill="none" stroke="#dfba78" stroke-opacity=".36" stroke-width="1.5"/>
+<path d="M206 742V327C206 228 285 153 380 153S554 228 554 327V742" fill="none" stroke="#d2a56c" stroke-opacity=".19" stroke-width="1"/>
+<path d="M260 750V334C260 269 314 214 380 214S500 269 500 334V750" fill="none" stroke="#b7a079" stroke-opacity=".16" stroke-width="1"/>
+<!-- galaxy circular window -->
+<circle cx="380" cy="353" r="153" fill="#071326" stroke="#d9b778" stroke-width="2.2"/>
+<circle cx="380" cy="353" r="145" fill="url(#sky)" stroke="#ccac71" stroke-opacity=".48" stroke-width="1"/>
+<circle cx="380" cy="353" r="129" fill="none" stroke="#f7df9e" stroke-opacity=".4" stroke-width="1"/>
+<circle cx="380" cy="353" r="112" fill="none" stroke="#d5ad6b" stroke-opacity=".23" stroke-width="1" stroke-dasharray="3 10"/>
+<path d="M232 355H528 M380 206V500" stroke="#dec48c" stroke-opacity=".16"/>
+<g fill="none" stroke="#edd7a5" stroke-linecap="round">
+<path d="M380 260c-40 43-41 113 1 168" stroke-width="2" opacity=".68"/>
+<path d="M379 261c48 48 38 113-2 168" stroke-width="1.5" opacity=".6"/>
+<path d="M332 352h96" stroke-width="2" opacity=".62"/>
+<path d="M332 352l14-14m-14 14 14 14M428 352l-14-14m14 14-14 14" stroke-width="1.5" opacity=".55"/>
+</g>
+<text x="380" y="384" font-size="79" font-family="Georgia,serif" font-style="italic" fill="#ffedc3" text-anchor="middle" filter="url(#glow)">L</text>
+<path d="M336 444h88" stroke="#d4ad6f" stroke-width="1"/>
+<text x="380" y="459" text-anchor="middle" font-size="8" letter-spacing="4.3" font-family="sans-serif" fill="#d7c499">L O U N G E</text>
+<!-- floating chandeliers -->
+<path d="M380 90v64" stroke="#d3ae76" stroke-width="1.7"/>
+<path d="M334 160h92 M345 159l35 26 35-26" stroke="#dcbb85" stroke-width="1.4" fill="none"/>
+<path d="M380 185v24" stroke="#e2c991" stroke-width="1.5"/>
+<circle cx="380" cy="199" r="5" fill="#ffeab3" filter="url(#glow)"/>
+<circle cx="335" cy="163" r="3" fill="#f7e4b0" filter="url(#glow)"/>
+<circle cx="426" cy="163" r="3" fill="#f7e4b0" filter="url(#glow)"/>
+<!-- floor light -->
+<path d="M135 588h490v160H135Z" fill="url(#floor)" opacity=".9"/>
+<path d="M135 590h490" stroke="#d2b37a" stroke-opacity=".34"/>
+<path d="M380 590 125 742M380 590l255 152M380 590v152" stroke="#d6b67d" stroke-opacity=".1"/>
+<ellipse cx="380" cy="685" rx="169" ry="32" fill="#d1b67a" opacity=".08" filter="url(#glow)"/>
+<path d="M250 685c44 29 215 29 260 0" stroke="#e5c28a" stroke-opacity=".38" stroke-width="1.2" fill="none"/>
+</g>
+<!-- ornate entrance border -->
+<path d="M145 745V327C145 194 248 87 380 87S615 194 615 327V745" fill="none" stroke="#f3dca7" stroke-opacity=".65" stroke-width="2.5"/>
+<path d="M124 762V329C124 187 238 73 380 73S636 187 636 329V762" fill="none" stroke="#614b33" stroke-width="3.4"/>
+<path d="M95 768h570" stroke="url(#rim)" stroke-width="4"/>
+<path d="M66 782h628" stroke="#d8b579" stroke-opacity=".6" stroke-width="1"/>
+<path d="M55 804h650" stroke="#d8b579" stroke-opacity=".18" stroke-width="1"/>
+<!-- ornate branches -->
+<g stroke="#c8a570" fill="none" stroke-linecap="round" opacity=".82">
+<path d="M126 685c-62-55-75-104-53-159m17 99c-39-35-49-66-40-101m37 82c-26-11-45-40-47-71m52 69c-8-38-5-66 6-90" stroke-width="1.6"/>
+<path d="M74 544c-28-12-33-37-23-50 27 13 34 31 23 50Zm16 46c-30-8-48-24-47-44 27 4 45 18 47 44Zm-10 9c-5-31 2-49 21-61 9 30 4 49-21 61Z" fill="#b18d5e" fill-opacity=".19" stroke-width="1"/>
+<path d="M634 685c62-55 75-104 53-159m-17 99c39-35 49-66 40-101m-37 82c26-11 45-40 47-71m-52 69c8-38 5-66-6-90" stroke-width="1.6"/>
+<path d="M686 544c28-12 33-37 23-50-27 13-34 31-23 50Zm-16 46c30-8 48-24 47-44-27 4-45 18-47 44Zm10 9c5-31-2-49-21-61-9 30-4 49 21 61Z" fill="#b18d5e" fill-opacity=".19" stroke-width="1"/>
+</g>
+<!-- glimmers -->
+<g fill="#ffedc1" filter="url(#glow)"><circle cx="171" cy="291" r="2.7"/><circle cx="592" cy="275" r="2"/><circle cx="282" cy="175" r="1.4"/><circle cx="510" cy="510" r="2"/><circle cx="248" cy="470" r="1.6"/><circle cx="475" cy="190" r="1.5"/><circle cx="590" cy="594" r="1.2"/><circle cx="179" cy="586" r="1.3"/></g>
+<g stroke="#f8e0ae" stroke-width="1" opacity=".85"><path d="M171 280v22m-11-11h22M510 502v16m-8-8h16M591 267v16m-8-8h16"/></g>
+</svg>

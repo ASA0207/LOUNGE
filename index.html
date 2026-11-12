@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ko" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#07101b">
+  <meta name="description" content="테일즈런너 Lv.15 Lounge 길드 공식 모집·안내 페이지. 성인 / 스텔라 이상, 길퀘 자유. 가입 조건, 길드 규칙, 문의 채널을 확인하세요.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lounge · Where Runners Belong">
+  <meta property="og:description" content="조금 더 오래, 함께 달릴 사람들. Lv.15 테일즈런너 Lounge 길드 안내">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <script src="assets/main.js" defer></script>
+  <title>Lounge | Lv.15 테일즈런너 길드</title>
+</head>
+<body data-theme="midnight">
+  <a href="#main" class="skip-link">본문으로 바로가기</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="grain-layer" aria-hidden="true"></div>
+  <div class="backdrop-radiance" aria-hidden="true"></div>
+
+  <!-- Opening scene. Has a no-JS fallback: the opening screen is hidden without JavaScript. -->
+  <section id="entryScreen" class="entry-screen" aria-label="Lounge 입장 화면" aria-hidden="true">
+    <div class="entry-grid" aria-hidden="true"></div>
+    <div class="entry-aura entry-aura-a" aria-hidden="true"></div>
+    <div class="entry-aura entry-aura-b" aria-hidden="true"></div>
+    <div class="entry-wings" aria-hidden="true"><span></span><span></span></div>
+    <div class="entry-content">
+      <p class="entry-kicker">YOU ARE CORDIALLY INVITED</p>
+      <div class="entry-crest"><span class="entry-crest-spark">✧</span><span>L</span><small>15</small></div>
+      <p class="entry-small">TALES RUNNER · PRIVATE GUILD</p>
+      <h2 class="entry-title">Lounge<span class="entry-period">.</span></h2>
+      <p class="entry-subtitle">당신을 위한 자리는, 늘 특별하게.</p>
+      <button id="enterButton" type="button" class="btn btn-gold entry-button"><span>라운지 입장하기</span><span class="btn-arrow" aria-hidden="true">↗</span></button>
+      <p class="entry-footnote">SCROLL LESS, FEEL MORE <span>✦</span> EST. LV 15</p>
+    </div>
+    <button id="skipEntry" class="entry-skip" type="button">바로 둘러보기 <span aria-hidden="true">↗</span></button>
+    <span class="entry-side entry-side-left" aria-hidden="true">A PLACE TO BELONG</span>
+    <span class="entry-side entry-side-right" aria-hidden="true">OPEN FOR NEW RUNNERS</span>
+  </section>
+
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="#home" class="brand" aria-label="Lounge 홈페이지 처음으로">
+        <img src="assets/monogram.svg" alt="" width="39" height="39">
+        <span class="brand-type"><strong>LOUNGE</strong><small>PRIVATE RUNNERS CLUB</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="주 메뉴">
+        <a href="#about" data-nav="about">ABOUT</a>
+        <a href="#requirements" data-nav="requirements">MEMBERSHIP</a>
+        <a href="#rules" data-nav="rules">HOUSE RULES</a>
+        <a href="#join" data-nav="join">JOIN US</a>
+        <a href="#contacts" data-nav="contacts">CONTACT</a>
+      </nav>
+      <div class="header-actions">
+        <span class="header-lv"><span class="status-dot"></span> LV.15 GUILD</span>
+        <button id="themeToggle" class="icon-button theme-button" type="button" aria-label="밝은 테마로 바꾸기" title="분위기 전환"><span id="themeIcon" aria-hidden="true">☀</span></button>
+        <button id="menuToggle" class="icon-button menu-toggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav id="mobileNav" class="mobile-nav" aria-label="모바일 메뉴" aria-hidden="true">
+      <a href="#home">HOME <span>01</span></a>
+      <a href="#about">ABOUT <span>02</span></a>
+      <a href="#requirements">MEMBERSHIP <span>03</span></a>
+      <a href="#rules">HOUSE RULES <span>04</span></a>
+      <a href="#join">JOIN US <span>05</span></a>
+      <a href="#contacts">CONTACT <span>06</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home" aria-labelledby="heroHeading">
+      <div class="hero-halo hero-halo-one" aria-hidden="true"></div>
+      <div class="hero-halo hero-halo-two" aria-hidden="true"></div>
+      <div class="hero-wrap container">
+        <div class="hero-copy">
+          <div class="overline hero-overline"><span class="overline-line"></span> WELCOME TO OUR PRIVATE LOUNGE <span class="overline-star">✦</span> LV.15</div>
+          <p class="hero-upper">RUN TOGETHER. STAY TOGETHER.</p>
+          <h1 id="heroHeading">어느 밤에도,<br><em>함께 달릴</em><br>우리의 <span class="hero-gold">Lounge.</span></h1>
+          <p class="hero-description">달리는 순간도, 쉬어 가는 순간도.<br>서로를 존중하고 함께 오래 머무는<br class="mobile-only"> 테일즈런너 길드 <strong>Lounge</strong>에 초대합니다.</p>
+          <div class="hero-cta">
+            <a href="#join" class="btn btn-gold">가입 문의하기 <span class="btn-arrow" aria-hidden="true">↗</span></a>
+            <a href="#about" class="btn btn-outline">라운지 둘러보기 <span class="btn-arrow" aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-bottom-details"><div class="hero-mini-stars" aria-hidden="true">✦ ✧ ✦</div><span>성인 · 스텔라 이상</span><span class="little-divider"></span><span>길퀘 자유</span></div>
+        </div>
+        <div class="hero-stage" aria-label="황금빛 라운지 문 일러스트">
+          <div class="stage-orbit orbit-a"></div><div class="stage-orbit orbit-b"></div>
+          <div class="stage-image-wrap" id="heroArtWrap"><img class="hero-illustration" src="assets/lounge-portal.svg" alt="별빛이 가득한 황금빛 라운지 아치, 가운데의 L 엠블럼" width="760" height="900" fetchpriority="high"></div>
+          <div class="stage-floating stage-float-top"><span>✦</span> A DIFFERENT KIND OF GUILD</div>
+          <div class="stage-floating stage-float-bottom"><span class="small-diamond" aria-hidden="true">◇</span> YOUR SEAT IS READY</div>
+          <div class="hero-sparkle hero-sparkle-a">✧</div><div class="hero-sparkle hero-sparkle-b">✦</div><div class="hero-sparkle hero-sparkle-c">✧</div>
+        </div>
+      </div>
+      <div class="hero-scroll"><span>SCROLL TO EXPLORE</span><div></div><span>01 / 06</span></div>
+    </section>
+
+    <section id="about" class="section intro-section" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section-heading center reveal"><p class="eyebrow">THE LOUNGE PHILOSOPHY <span class="tiny-asterisk">✳</span> 01</p><h2 id="aboutHeading">좋은 인연은,<br><em>좋은 분위기에서.</em></h2><p class="section-lead">속도보다 중요한 건 함께 달릴 사람. Lounge는 편안하지만 예의를 잃지 않는 공간을 지향합니다.</p></div>
+        <div class="metric-rail reveal">
+          <div class="metric"><span class="metric-symbol">01 /</span><strong>15<span class="metric-small">Lv.</span></strong><span class="metric-label">GUILD LEVEL</span></div>
+          <div class="metric"><span class="metric-symbol">02 /</span><strong>FREE<span class="metric-small">✧</span></strong><span class="metric-label">길드 퀘스트 자율</span></div>
+          <div class="metric"><span class="metric-symbol">03 /</span><strong>24<span class="metric-small">H</span></strong><span class="metric-label">문의 가능 시간</span></div>
+          <div class="metric"><span class="metric-symbol">04 /</span><strong>1–2<span class="metric-small">×</span></strong><span class="metric-label">연간 정기정모 예정</span></div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-one reveal"><span class="feature-index">01 / OUR VIBE</span><span class="feature-watermark">自由</span><div class="feature-art" aria-hidden="true"><span class="feature-moon"></span><span class="feature-stars">✧ ✦ ✧</span></div><div class="feature-content"><span class="feature-icon">✧</span><h3>자유로운 플레이</h3><p>매일의 길퀘는 의무가 아닙니다. 본인의 페이스를 존중하며 즐겁게 달려요.</p></div></article>
+          <article class="feature-card feature-two reveal"><span class="feature-index">02 / OUR ENERGY</span><div class="feature-art feature-art-rings" aria-hidden="true"><span class="ring ring-a"></span><span class="ring ring-b"></span><span class="ring ring-c"></span><span class="center-spark">✳</span></div><div class="feature-content"><span class="feature-icon">♡</span><h3>함께하는 즐거움</h3><p>게임에 모이는 시간도, 오픈채팅과 디스코드의 대화도 소중하게 생각해요.</p></div></article>
+          <article class="feature-card feature-three reveal"><span class="feature-index">03 / OUR PROMISE</span><div class="feature-art feature-art-leaf" aria-hidden="true"><span>❦</span><i>✦</i></div><div class="feature-content"><span class="feature-icon">◇</span><h3>오래가는 사이</h3><p>서로의 선을 존중하고 소통하며, 가볍게 스쳐 가지 않는 인연을 만들어요.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee-wrap" aria-hidden="true"><div class="marquee-track">LOUNGE <span>✦</span> GOOD PEOPLE, GOOD RUNS <span>✦</span> LOUNGE <span>✦</span> GOOD PEOPLE, GOOD RUNS <span>✦</span> LOUNGE <span>✦</span> GOOD PEOPLE, GOOD RUNS <span>✦</span></div></div>
+
+    <section id="requirements" class="section membership-section" aria-labelledby="memberHeading">
+      <div class="container membership-layout">
+        <div class="membership-left reveal"><p class="eyebrow">MEMBERSHIP POLICY <span class="tiny-asterisk">✳</span> 02</p><h2 id="memberHeading">Lounge의 문을<br>두드리기 전에.</h2><p class="membership-description">가입 요건을 먼저 확인해주세요. 체크리스트는 <strong>본인 확인용</strong>으로만 사용되며 어디에도 전송되지 않습니다.</p><div class="membership-note"><span class="note-symbol">✷</span><div><strong>길드 퀘스트는 자유</strong><p>길퀘 참여 여부와 상관없이 서로의 시간을 존중합니다.</p></div></div><a class="text-link" href="#join">지원 메시지 작성하러 가기 <span aria-hidden="true">↗</span></a></div>
+        <div class="membership-right reveal">
+          <div class="check-panel"><div class="panel-top"><span class="panel-id">MEMBER CHECK / 04</span><span class="panel-stars" aria-hidden="true">✳ ✳ ✳</span></div><h3>Are we a match?</h3><p>해당하는 항목을 체크해 보세요.</p>
+            <div class="check-items">
+              <label class="check-item"><input type="checkbox" class="eligibility-check"><span class="check-square" aria-hidden="true"></span><span><strong>성인입니다.</strong><small>성인 가입 기준</small></span><span class="check-num">01</span></label>
+              <label class="check-item"><input type="checkbox" class="eligibility-check"><span class="check-square" aria-hidden="true"></span><span><strong>테일즈런너 스텔라 이상입니다.</strong><small>레벨 기준</small></span><span class="check-num">02</span></label>
+              <label class="check-item"><input type="checkbox" class="eligibility-check"><span class="check-square" aria-hidden="true"></span><span><strong>이중길드·철새·n미새 금지를 지킵니다.</strong><small>길드 이용 원칙</small></span><span class="check-num">03</span></label>
+              <label class="check-item"><input type="checkbox" class="eligibility-check"><span class="check-square" aria-hidden="true"></span><span><strong>오픈채팅과 디스코드 모두 참여 가능합니다.</strong><small>두 채널 참여 필수</small></span><span class="check-num">04</span></label>
+            </div>
+            <div class="check-footer"><div><span class="check-count" id="checkCount">0 / 4</span><span class="check-caption" id="checkCaption">하나씩 확인해주세요</span></div><div class="check-progress-track"><span id="checkProgress"></span></div></div>
+            <p id="checkCompleteText" class="check-complete" role="status" aria-live="polite">체크를 마치면 다음 단계를 안내해 드려요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section rules-section" aria-labelledby="rulesHeading">
+      <div class="container">
+        <div class="rules-header reveal"><div><p class="eyebrow">THE HOUSE RULES <span class="tiny-asterisk">✳</span> 03</p><h2 id="rulesHeading">좋은 라운지를<br>만드는 <em>약속.</em></h2></div><p>서로를 존중하는 만큼 더 오래 함께할 수 있어요. 궁금한 규칙은 검색하거나 주제별로 골라 확인해 보세요.</p></div>
+        <div class="rules-toolbar reveal"><div class="rule-filters" role="group" aria-label="규칙 분야 선택"><button class="filter-btn active" data-filter="all" aria-pressed="true">전체 <span>12</span></button><button class="filter-btn" data-filter="membership" aria-pressed="false">가입·활동</button><button class="filter-btn" data-filter="etiquette" aria-pressed="false">매너</button><button class="filter-btn" data-filter="community" aria-pressed="false">소통</button><button class="filter-btn" data-filter="offline" aria-pressed="false">오프라인</button></div><label class="rule-search"><span aria-hidden="true">⌕</span><span class="sr-only">규칙 검색</span><input id="ruleSearch" type="search" placeholder="규칙 검색하기" autocomplete="off"></label></div>
+        <div id="ruleList" class="rule-list">
+          <details class="rule-card reveal" data-category="membership" data-search="성인 스텔라 이상 가입 레벨"><summary><span class="rule-number">01</span><span class="rule-card-main"><span class="rule-category">MEMBERSHIP</span><strong>성인 · 스텔라 이상</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">가입 대상은 <strong>성인</strong>이며, 테일즈런너 <strong>스텔라 이상</strong> 레벨이어야 합니다.</div></details>
+          <details class="rule-card reveal" data-category="membership" data-search="길퀘 길드 퀘스트 자유 자율 참여"><summary><span class="rule-number">02</span><span class="rule-card-main"><span class="rule-category">ACTIVITY</span><strong>길퀘는 자유롭게</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">길드 퀘스트 참여는 <strong>자유</strong>입니다. 강제 참여 규정은 없습니다.</div></details>
+          <details class="rule-card reveal" data-category="membership" data-search="이중길드 철새 n미새 금지"><summary><span class="rule-number">03</span><span class="rule-card-main"><span class="rule-category">MEMBERSHIP</span><strong>이중길드 · 철새 · n미새 금지</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">길드 내에서 <strong>이중길드, 철새 행동, n미새</strong>는 금지합니다. 오래 함께할 분을 기다려요.</div></details>
+          <details class="rule-card reveal" data-category="etiquette" data-search="상대방 동의 반말 존댓말 예의 존중"><summary><span class="rule-number">04</span><span class="rule-card-main"><span class="rule-category">ETIQUETTE</span><strong>동의 없는 일방적인 반말 금지</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">상대방의 동의 없이 일방적으로 반말하지 말아 주세요. 서로의 대화 방식을 존중해주세요.</div></details>
+          <details class="rule-card reveal" data-category="etiquette" data-search="싸럽 연애 길드 내 연애 얼굴 대면 사랑 금지"><summary><span class="rule-number">05</span><span class="rule-card-main"><span class="rule-category">ETIQUETTE</span><strong>싸럽 절대 금지 · 길드 내 연애 지양</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail"><strong>싸럽은 절대 금지</strong>입니다. 얼굴을 직접 대면한 뒤 사랑을 하게 되는 상황까지 막지는 않지만, 가능하면 길드 내 연애는 피해 주세요.</div></details>
+          <details class="rule-card reveal" data-category="community" data-search="길원 모여서 게임 참여율 낮으면 적극 참여 게임"><summary><span class="rule-number">06</span><span class="rule-card-main"><span class="rule-category">TOGETHER</span><strong>함께 게임할 때는 적극적으로</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">길드원들이 함께 모여 게임하는 때에는 적극적으로 참여해 주세요. 참여율이 너무 낮지 않도록 서로 노력하는 분위기를 지향합니다.</div></details>
+          <details class="rule-card reveal" data-category="community" data-search="개인사정 미접속 접속 어려움 길마 서마 사전 연락"><summary><span class="rule-number">07</span><span class="rule-card-main"><span class="rule-category">COMMUNICATION</span><strong>접속이 어렵다면 미리 알려주세요</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">개인 사정으로 인게임 접속이 어려울 경우, <strong>길드 마스터 또는 서브 마스터</strong>에게 미리 말씀해주세요.</div></details>
+          <details class="rule-card reveal" data-category="community" data-search="인게임 참여율 카톡 디코 적극 참여 오픈채팅 디스코드"><summary><span class="rule-number">08</span><span class="rule-card-main"><span class="rule-category">COMMUNICATION</span><strong>게임이 어렵다면 채팅에서 함께해요</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">인게임 참여율이 낮다면 카카오톡 오픈채팅 또는 디스코드에서라도 <strong>적극적으로 소통</strong>해 주세요.</div></details>
+          <details class="rule-card reveal" data-category="community" data-search="오픈채팅 디스코드 참여 필수"><summary><span class="rule-number">09</span><span class="rule-card-main"><span class="rule-category">CHANNELS</span><strong>오픈채팅 · 디스코드 참여 필수</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">Lounge는 <strong>오픈채팅과 디스코드 모두 참여 필수</strong>입니다. 초대 안내가 필요하면 운영진에게 문의해주세요.</div></details>
+          <details class="rule-card reveal" data-category="offline" data-search="연 1~2회 정기정모 오프라인 모임"><summary><span class="rule-number">10</span><span class="rule-card-main"><span class="rule-category">GET TOGETHER</span><strong>연 1–2회 정기정모 예정</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">연 <strong>1~2회 정기정모</strong>를 예정하고 있습니다. 모임 일정과 세부 안내는 운영진 공지를 확인해 주세요.</div></details>
+          <details class="rule-card reveal" data-category="offline" data-search="정모 필참 아님 적극 참여 권장 자유"><summary><span class="rule-number">11</span><span class="rule-card-main"><span class="rule-category">GET TOGETHER</span><strong>정모 필참은 아니지만 적극 참여 환영</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">정기정모는 <strong>필수 참석이 아닙니다.</strong> 가능하다면 적극적인 참여를 부탁드려요.</div></details>
+          <details class="rule-card reveal" data-category="community" data-search="오픈채팅 링크 비밀번호 090809 가입 길드 채팅 참여"><summary><span class="rule-number">12</span><span class="rule-card-main"><span class="rule-category">CHANNELS</span><strong>길드 오픈채팅 입장 안내</strong></span><span class="rule-plus" aria-hidden="true">+</span></summary><div class="rule-detail">길드 오픈채팅: <a href="https://open.kakao.com/o/gs4awgTi" target="_blank" rel="noopener noreferrer">바로가기 ↗</a><br>입장 비밀번호: <strong>090809</strong> <button type="button" class="text-copy" data-copy="090809" data-copy-label="오픈채팅 비밀번호">복사</button><br><span class="detail-note">가입 문의용 오픈채팅과 길드 참여용 오픈채팅은 서로 다른 링크입니다.</span></div></details>
+        </div>
+        <div id="ruleEmpty" class="rules-empty" hidden><span>✧</span><strong>찾으시는 규칙이 없어요.</strong><p>다른 키워드로 검색하거나 전체 탭을 눌러주세요.</p></div>
+        <div class="rules-footer"><span id="ruleResult" role="status" aria-live="polite">12개의 규칙 표시 중</span><button id="expandAllRules" class="text-link" type="button">모두 펼쳐보기 <span aria-hidden="true">＋</span></button></div>
+      </div>
+    </section>
+
+    <section class="section atmosphere-section" aria-label="Lounge가 지향하는 분위기">
+      <div class="container"><div class="quote-card reveal"><div class="quote-inner"><span class="quote-icon">❝</span><p>혼자 달릴 땐 빠르게,<br><em>함께 달릴 땐 오래.</em></p><div class="quote-bottom"><span>LOUNGE MANIFESTO</span><span class="quote-star">✷</span><span>LV.15 · TALES RUNNER</span></div></div></div></div>
+    </section>
+
+    <section id="join" class="section join-section" aria-labelledby="joinHeading">
+      <div class="container">
+        <div class="section-heading center reveal"><p class="eyebrow">YOUR INVITATION AWAITS <span class="tiny-asterisk">✳</span> 04</p><h2 id="joinHeading">이제, 인사를<br><em>건네볼 시간.</em></h2><p class="section-lead">문의 메시지를 손쉽게 작성하고 복사해 보세요. 입력하신 내용은 사이트에 저장하거나 서버로 전송하지 않습니다.</p></div>
+        <div class="join-steps reveal"><div><span>01</span><strong>가입 조건 확인</strong><small>성인 · 스텔라 이상</small></div><span class="step-connector" aria-hidden="true">✧</span><div><span>02</span><strong>문의 정보 작성</strong><small>나이 · 성별 · 레벨 등</small></div><span class="step-connector" aria-hidden="true">✧</span><div><span>03</span><strong>운영진에게 문의</strong><small>카카오톡 · 인게임 · 디스코드</small></div></div>
+        <div class="form-layout">
+          <form id="inquiryForm" class="inquiry-card reveal" autocomplete="off" novalidate>
+            <div class="form-card-top"><span class="form-card-star">✳</span><div><span class="panel-id">APPLICATION / LOUNGE</span><h3>가입 문의 카드</h3></div><span class="form-card-count">01—06</span></div>
+            <div class="form-grid">
+              <label><span>나이 <i>*</i></span><input id="formAge" name="age" inputmode="numeric" maxlength="12" placeholder="예: 24" required></label>
+              <label><span>성별 <i>*</i></span><input id="formGender" name="gender" maxlength="30" placeholder="성별을 입력해주세요" required></label>
+              <label><span>테일즈런너 레벨 <i>*</i></span><input id="formLevel" name="level" maxlength="40" placeholder="예: 스텔라 3" required></label>
+              <label><span>접속률 <i>*</i></span><input id="formActivity" name="activity" maxlength="70" placeholder="예: 주 5일" required></label>
+              <label class="field-full"><span>주 접속 시간대 <i>*</i></span><input id="formTime" name="time" maxlength="90" placeholder="예: 평일 20~24시, 주말 자유" required></label>
+            </div>
+            <fieldset class="form-options"><legend>오픈채팅 · 디스코드 참여 가능 여부 <i>*</i></legend><label><input id="canKakao" type="checkbox" checked><span class="option-check">✓</span> 오픈채팅 가능</label><label><input id="canDiscord" type="checkbox" checked><span class="option-check">✓</span> 디스코드 가능</label></fieldset>
+            <p class="form-privacy">✧ 작성 내용은 내 브라우저 안에서만 미리보기로 만들어집니다. ‘복사’ 버튼을 누르기 전까지 어디에도 보내지지 않아요.</p>
+            <button id="copyApplication" class="btn btn-gold form-copy-btn" type="submit">문의 내용 복사하기 <span aria-hidden="true">↗</span></button>
+          </form>
+          <div class="preview-column reveal"><div class="live-preview"><span class="preview-ornament" aria-hidden="true">✧</span><div class="preview-top"><span class="panel-id">LIVE PREVIEW</span><span class="preview-live"><span></span> 실시간</span></div><h3>보내실 메시지</h3><pre id="applicationPreview" aria-live="polite">안녕하세요! Lounge 길드 가입 문의드립니다.
+
+나이: 미입력
+성별: 미입력
+레벨: 미입력
+접속률: 미입력
+접속 시간대: 미입력
+오픈채팅 가능 여부: 가능
+디스코드 가능 여부: 가능
+
+확인 부탁드립니다. 감사합니다!</pre><div class="preview-bottom"><span>문의 내용을 복사한 후 아래 채널로 보내주세요.</span><a href="https://open.kakao.com/o/sTsidoKi" target="_blank" rel="noopener noreferrer">오픈채팅 문의 ↗</a></div></div><div class="mini-advice"><span>✦</span><p>문의 오픈채팅은 <strong>본인의 닉네임으로 입장</strong>해주세요. 24시간 문의 가능합니다.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="section contacts-section" aria-labelledby="contactHeading"><div class="container">
+      <div class="contact-head reveal"><div><p class="eyebrow">CONCIERGE DESK <span class="tiny-asterisk">✳</span> 05</p><h2 id="contactHeading">언제든, <em>노크하세요.</em></h2><p>인게임 쪽지 · 오픈채팅 · 디스코드 중 편한 채널을 선택해주세요.</p></div><div class="contact-hours"><span class="hours-dot"></span><strong>24H</strong><small>문의 가능</small></div></div>
+      <div class="contact-grid">
+        <article class="contact-card reveal"><div class="contact-card-top"><span>01 / IN-GAME</span><span class="contact-card-symbol">✦</span></div><h3>인게임 쪽지</h3><p>다음 닉네임으로 쪽지를 보내주세요.</p><div class="name-tags"><button type="button" class="copy-chip" data-copy="42초" data-copy-label="인게임 닉네임">42초 <span>⧉</span></button><button type="button" class="copy-chip" data-copy="단비킴" data-copy-label="인게임 닉네임">단비킴 <span>⧉</span></button><button type="button" class="copy-chip" data-copy="짧당근" data-copy-label="인게임 닉네임">짧당근 <span>⧉</span></button></div><div class="contact-card-foot">TALES RUNNER <span aria-hidden="true">↗</span></div></article>
+        <article class="contact-card contact-primary reveal"><div class="contact-card-top"><span>02 / OPEN KAKAO</span><span class="contact-card-symbol">✧</span></div><h3>오픈채팅 문의</h3><p>본인의 <strong>닉네임으로 입장</strong>해 주세요.</p><a class="contact-action" href="https://open.kakao.com/o/sTsidoKi" target="_blank" rel="noopener noreferrer">문의방 바로가기 <span aria-hidden="true">↗</span></a><div class="contact-card-foot">24시간 문의 가능 <span aria-hidden="true">◇</span></div></article>
+        <article class="contact-card reveal"><div class="contact-card-top"><span>03 / DISCORD</span><span class="contact-card-symbol">❋</span></div><h3>디스코드 문의</h3><p>아래 계정으로 DM을 보내주세요.</p><div class="name-tags"><button type="button" class="copy-chip" data-copy="minseo6693" data-copy-label="디스코드 아이디">minseo6693 <span>⧉</span></button><button type="button" class="copy-chip" data-copy="minseo2_" data-copy-label="디스코드 아이디">minseo2_ <span>⧉</span></button></div><div class="contact-card-foot">DISCORD DM <span aria-hidden="true">↗</span></div></article>
+      </div>
+      <div class="group-chat-bar reveal"><div class="group-bar-graphic">✳</div><div class="group-bar-content"><span class="panel-id">MEMBERS ONLY · COMMUNITY CHANNEL</span><h3>Lounge 길드 오픈채팅</h3><p>길드 참여용 오픈채팅입니다. 가입 문의 오픈채팅과 다른 방이에요.</p></div><div class="group-bar-actions"><div class="passcode"><small>입장 비밀번호</small><strong id="joinPassDisplay">••••••</strong><button id="revealPass" type="button" aria-label="비밀번호 보기" aria-pressed="false" title="비밀번호 보기">◉</button><button class="pass-copy" type="button" data-copy="090809" data-copy-label="길드 채팅 비밀번호">복사</button></div><a href="https://open.kakao.com/o/gs4awgTi" target="_blank" rel="noopener noreferrer" class="btn btn-gold">길드 채팅 입장 <span class="btn-arrow" aria-hidden="true">↗</span></a></div></div>
+    </div></section>
+
+    <section id="keepsake" class="section keepsake-section" aria-labelledby="keepsakeHeading"><div class="container keepsake-layout">
+      <div class="keepsake-copy reveal"><p class="eyebrow">A LITTLE SOMETHING <span class="tiny-asterisk">✳</span> 06</p><h2 id="keepsakeHeading">오늘의 방문을<br><em>기념해요.</em></h2><p>Lounge 방문을 기념하는 나만의 디지털 초대 카드를 만들어보세요. 닉네임을 적고 PNG 이미지로 저장할 수 있습니다.</p><label for="passName">나의 러너 닉네임</label><div class="pass-input-wrap"><input id="passName" type="text" maxlength="18" placeholder="RUNNER" autocomplete="off"><span>✧</span></div><button id="downloadPass" class="btn btn-outline" type="button">기념 카드 이미지 저장 <span aria-hidden="true">↓</span></button><p class="pass-disclaimer">※ 방문 기념용 이미지이며 길드 가입 증명은 아닙니다.</p></div>
+      <div class="keepsake-card-area reveal"><div class="keepsake-card" id="keepsakeCard"><div class="keepsake-card-glow"></div><div class="pass-arc pass-arc-one"></div><div class="pass-arc pass-arc-two"></div><div class="keepsake-card-top"><span class="pass-identity">LOUNGE<span>✦</span></span><span class="pass-issue">AN INVITATION TO BELONG</span></div><span class="pass-center-emblem">✳</span><p class="pass-caption">A PERSONAL MEMENTO FOR</p><strong id="passNameDisplay">RUNNER</strong><div class="keepsake-card-bottom"><span>TALES RUNNER GUILD</span><span>LV.15 / THE LOUNGE</span><span class="pass-diamond">◇</span></div></div><div class="pass-floating-label"><span class="status-dot"></span> PERSONAL VISITOR CARD</div></div>
+    </div></section>
+
+    <section class="outro-section section"><div class="container outro-inner reveal"><div class="outro-stars" aria-hidden="true">✧ &nbsp; ✳ &nbsp; ✧</div><p>YOUR PLACE AT THE TABLE</p><h2>다음 이야기의<br>주인공은 <em>당신.</em></h2><a href="#join" class="btn btn-gold">Lounge와 함께하기 <span class="btn-arrow" aria-hidden="true">↗</span></a><span class="outro-ornament" aria-hidden="true">❦</span></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><div><img src="assets/monogram.svg" alt="" width="49" height="49"><span>LOUNGE</span></div><p>Somewhere between the run and the rest,<br>we found our people.</p></div><div class="footer-links"><div><span>EXPLORE</span><a href="#about">About Lounge</a><a href="#requirements">Membership</a><a href="#rules">House Rules</a></div><div><span>CONNECT</span><a href="#join">Apply</a><a href="#contacts">Contact</a><a href="https://open.kakao.com/o/sTsidoKi" target="_blank" rel="noopener noreferrer">Kakao Inquiry ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> LOUNGE GUILD · AN UNOFFICIAL FAN-MADE GUILD PAGE</span><div><button id="eggHint" class="easter-hint" type="button" title="힌트: 키보드로 세 글자!">A LITTLE SECRET: A·S·A ✧</button><a href="#home">BACK TO TOP ↑</a></div></div></div></footer>
+
+  <button id="backTop" class="back-top" type="button" aria-label="맨 위로 이동" title="맨 위로">↑</button>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="easterOverlay" class="easter-overlay" role="dialog" aria-modal="true" aria-labelledby="easterTitle" aria-hidden="true">
+    <div class="easter-cosmos"><div class="easter-ring ring-one"></div><div class="easter-ring ring-two"></div><div class="easter-ring ring-three"></div><span class="easter-symbol" aria-hidden="true">✦</span></div>
+    <div id="confettiField" class="confetti-field" aria-hidden="true"></div>
+    <div class="easter-copy"><p class="easter-kicker">SECRET MESSAGE UNLOCKED</p><p class="easter-small">✳ LOUNGE × ASA ✳</p><h2 id="easterTitle">잘부탁드립니다<span>!</span></h2><p>반가워요, 이 순간부터 조금 더 특별한 라운지.</p><button id="easterClose" type="button" class="btn btn-gold">라운지로 돌아가기 <span aria-hidden="true">✧</span></button></div>
+    <button id="easterX" class="easter-x" type="button" aria-label="이스터에그 닫기">×</button>
+  </div>
+</body>
+</html>
