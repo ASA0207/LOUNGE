@@ -37,10 +37,17 @@
       <p class="entry-small">TALES RUNNER · PRIVATE GUILD</p>
       <h2 class="entry-title">Lounge<span class="entry-period">.</span></h2>
       <p class="entry-subtitle">당신을 위한 자리는, 늘 특별하게.</p>
-      <button id="enterButton" type="button" class="btn btn-gold entry-button"><span>라운지 입장하기</span><span class="btn-arrow" aria-hidden="true">↗</span></button>
-      <p class="entry-footnote">SCROLL LESS, FEEL MORE <span>✦</span> EST. LV 15</p>
+      <div class="entry-actions" role="group" aria-label="입장 시 음악 선택">
+        <button id="enterButton" type="button" class="btn btn-gold entry-button"><span class="entry-action-mark" aria-hidden="true">♫</span><span class="entry-button-label">노래와 함께 입장<small>ENTER WITH MUSIC</small></span><span class="btn-arrow" aria-hidden="true">↗</span></button>
+        <button id="enterSilent" type="button" class="btn btn-outline entry-button"><span class="entry-action-mark" aria-hidden="true">☾</span><span class="entry-button-label">조용히 입장<small>ENTER IN SILENCE</small></span><span class="btn-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <div class="entry-audio-setup">
+        <div class="entry-audio-line"><label for="entryVolume">입장 음악 음량 <span>· 기본 18%</span></label><output id="entryVolumeValue" for="entryVolume">18%</output></div>
+        <input id="entryVolume" class="lounge-volume" type="range" min="0" max="100" step="1" value="18" aria-label="입장 음악 음량 조절">
+        <p class="entry-track-caption">NOW PLAYING IF SELECTED <span>✦</span> JENNIE — like JENNIE</p>
+      </div>
+      <p class="entry-footnote">YOUR NIGHT, YOUR SOUND <span>✦</span> LOUNGE LV.15</p>
     </div>
-    <button id="skipEntry" class="entry-skip" type="button">바로 둘러보기 <span aria-hidden="true">↗</span></button>
     <span class="entry-side entry-side-left" aria-hidden="true">A PLACE TO BELONG</span>
     <span class="entry-side entry-side-right" aria-hidden="true">OPEN FOR NEW RUNNERS</span>
   </section>
@@ -218,6 +225,16 @@
 
   <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><div><img src="assets/monogram.svg" alt="" width="49" height="49"><span>LOUNGE</span></div><p>Somewhere between the run and the rest,<br>we found our people.</p></div><div class="footer-links"><div><span>EXPLORE</span><a href="#about">About Lounge</a><a href="#requirements">Membership</a><a href="#rules">House Rules</a></div><div><span>CONNECT</span><a href="#join">Apply</a><a href="#contacts">Contact</a><a href="https://open.kakao.com/o/sTsidoKi" target="_blank" rel="noopener noreferrer">Kakao Inquiry ↗</a></div></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> LOUNGE GUILD · AN UNOFFICIAL FAN-MADE GUILD PAGE</span><div><button id="eggHint" class="easter-hint" type="button" title="힌트: 키보드로 세 글자!">A LITTLE SECRET: A·S·A ✧</button><a href="#home">BACK TO TOP ↑</a></div></div></div></footer>
 
+  <!-- Supplied by the site owner. Sound starts only after an explicit user click. -->
+  <audio id="loungeBgm" src="assets/lounge-like-jennie.mp3" preload="none" loop></audio>
+  <aside id="musicDock" class="music-dock" aria-label="배경음악 플레이어" aria-hidden="true">
+    <div class="music-dock-main">
+      <div class="music-record" aria-hidden="true"><span>♫</span></div>
+      <div class="music-meta"><strong>LIKE JENNIE</strong><span id="musicStatus" aria-live="polite">음악 꺼짐</span></div>
+      <button id="musicToggle" class="music-toggle" type="button" aria-label="음악 켜기" aria-pressed="false" title="음악 켜기"><span id="musicToggleIcon" aria-hidden="true">▶</span></button>
+    </div>
+    <div class="music-dock-volume"><label for="playerVolume">VOLUME</label><input id="playerVolume" class="lounge-volume" type="range" min="0" max="100" step="1" value="18" aria-label="배경음악 음량 조절"><output id="playerVolumeValue" for="playerVolume">18%</output></div>
+  </aside>
   <button id="backTop" class="back-top" type="button" aria-label="맨 위로 이동" title="맨 위로">↑</button>
   <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 

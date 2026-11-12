@@ -17,19 +17,83 @@
     set(key, value) { try { localStorage.setItem(key, value); } catch {} }
   };
 
-  // 01 — cinematic entry, with keyboard-accessible skip and remembered session choice
+  // 01 — soundtrack: playback is initiated directly from a user gesture.
+  // Browser autoplay policy: never call play() automatically on page load.
+  const bgm = $('#loungeBgm');
+  const musicDock = $('#musicDock');
+  const musicToggle = $('#musicToggle');
+  const entryVolume = $('#entryVolume');
+  const playerVolume = $('#playerVolume');
+  const audioDefault = 18; // loud source recording; gentle welcome volume
+  const clampVolume = value => Math.max(0, Math.min(100, Math.round(Number(value) || 0)));
+  const applyVolume = value => {
+    const level = clampVolume(value);
+    bgm.volume = level / 100;
+    entryVolume.value = String(level);
+    playerVolume.value = String(level);
+    $('#entryVolumeValue').textContent = `${level}%`;
+    $('#playerVolumeValue').textContent = `${level}%`;
+    storage.set('lounge-volume', String(level));
+    refreshPlayer();
+  };
+  function refreshPlayer() {
+    const playing = !bgm.paused && !bgm.ended;
+    musicDock.dataset.playing = String(playing);
+    musicToggle.setAttribute('aria-pressed', String(playing));
+    musicToggle.setAttribute('aria-label', playing ? '음악 끄기' : '음악 켜기');
+    musicToggle.setAttribute('title', playing ? '음악 끄기' : '음악 켜기');
+    $('#musicToggleIcon').textContent = playing ? '❚❚' : '▶';
+    $('#musicStatus').textContent = !playing ? '음악 꺼짐' : bgm.volume === 0 ? '재생 중 · 무음' : '재생 중 · JENNIE';
+  }
+  // Calling HTMLMediaElement.play() before any await preserves click activation.
+  function startMusic() {
+    try {
+      const started = bgm.play();
+      if (started && typeof started.catch === 'function') {
+        started.catch(error => {
+          console.warn('Background music playback unavailable:', error);
+          refreshPlayer();
+          toast('음악 재생이 차단됐어요. 음악 버튼을 눌러 다시 시도해주세요.');
+        });
+      }
+    } catch (error) {
+      console.warn('Background music playback unavailable:', error);
+      toast('음악 재생을 시작하지 못했어요.');
+    }
+  }
+  const initialVolume = storage.get('lounge-volume');
+  applyVolume(initialVolume !== null ? initialVolume : audioDefault);
+  bgm.addEventListener('play', refreshPlayer);
+  bgm.addEventListener('pause', refreshPlayer);
+  bgm.addEventListener('ended', refreshPlayer);
+  bgm.addEventListener('volumechange', refreshPlayer);
+  bgm.addEventListener('error', () => {
+    refreshPlayer();
+    toast('음악 파일을 불러오지 못했습니다. ZIP을 모두 풀었는지 확인해주세요.');
+  });
+  entryVolume.addEventListener('input', () => applyVolume(entryVolume.value));
+  playerVolume.addEventListener('input', () => applyVolume(playerVolume.value));
+  musicToggle.addEventListener('click', () => {
+    if (bgm.paused) startMusic();
+    else bgm.pause();
+  });
+
+  // 02 — cinematic entry. Always show the two explicit music choices on load.
   const entryScreen = $('#entryScreen');
   const mainContent = $('#main');
   const header = $('#siteHeader');
   let entryTimer;
+  let entered = false;
   const setPageInert = (blocked) => {
     mainContent.inert = blocked;
     header.inert = blocked;
     $('#backTop').inert = blocked;
   };
-  const exitEntry = () => {
-    if (!body.classList.contains('entry-active')) return;
-    session.set('lounge-entered', 'yes');
+  const exitEntry = (withMusic) => {
+    if (entered || !body.classList.contains('entry-active')) return;
+    entered = true;
+    if (withMusic) startMusic();
+    else bgm.pause();
     body.classList.add('entry-exit');
     body.classList.remove('entry-active');
     entryScreen.setAttribute('aria-hidden', 'true');
@@ -37,21 +101,23 @@
     entryTimer = window.setTimeout(() => {
       body.classList.remove('entry-exit', 'overlay-locked');
       setPageInert(false);
+      musicDock.inert = false;
+      musicDock.setAttribute('aria-hidden', 'false');
+      body.classList.add('music-ready');
       window.scrollTo({ top: 0, behavior: 'instant' });
       $('#heroHeading').setAttribute('tabindex', '-1');
       $('#heroHeading').focus({ preventScroll: true });
     }, reducedMotion ? 0 : 1150);
   };
-  if (session.get('lounge-entered') !== 'yes') {
-    body.classList.add('entry-active', 'overlay-locked');
-    setPageInert(true);
-    entryScreen.setAttribute('aria-hidden', 'false');
-    $('#enterButton').focus({ preventScroll: true });
-  }
-  $('#enterButton').addEventListener('click', exitEntry);
-  $('#skipEntry').addEventListener('click', exitEntry);
+  musicDock.inert = true;
+  body.classList.add('entry-active', 'overlay-locked');
+  setPageInert(true);
+  entryScreen.setAttribute('aria-hidden', 'false');
+  $('#enterButton').focus({ preventScroll: true });
+  $('#enterButton').addEventListener('click', () => exitEntry(true));
+  $('#enterSilent').addEventListener('click', () => exitEntry(false));
 
-  // 02 — theme preferences
+  // 03 — theme preferences
   const applyTheme = (theme) => {
     const next = theme === 'champagne' ? 'champagne' : 'midnight';
     body.dataset.theme = next;
